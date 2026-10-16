@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Library | Once Upon a Page</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <a class="logo" href="index.html">
+      <img class="icon" src="images/scenes/book.gif" onerror="this.onerror=null;this.src='images/icons/book.svg'" alt=""> Once Upon a Page
+    </a>
+    <nav>
+      <ul>
+        <li><a href="home.html"><img class="nav-icon" src="images/icons/house.png" onerror="this.onerror=null;this.src='images/icons/house.png'" alt=""> Home</a></li>
+        <li><a href="library.html" class="active"><img class="nav-icon" src="images/icons/books.png" onerror="this.onerror=null;this.src='images/icons/books.png'" alt=""> Library</a></li>
+        <li class="dropdown">
+          <a href="library.html"><img class="nav-icon" src="images/icons/genre.png" onerror="this.onerror=null;this.src='images/icons/library.svg'" alt=""> Genres &#9662;</a>
+          <ul class="dropdown-menu">
+            <li><a href="library.html?genre=Fantasy">Fantasy</a></li>
+            <li><a href="library.html?genre=Sci-Fi">Sci-Fi</a></li>
+            <li><a href="library.html?genre=Romance">Romance</a></li>
+            <li><a href="library.html?genre=Mystery">Mystery</a></li>
+            <li><a href="library.html?genre=Thriller">Thriller</a></li>
+            <li><a href="library.html?genre=Horror">Horror</a></li>
+            <li><a href="library.html?genre=Classic">Classic</a></li>
+            <li><a href="library.html?genre=Children's">Children's</a></li>
+            <li><a href="library.html?genre=Dystopian">Dystopian</a></li>
+            <li><a href="library.html?genre=Adventure">Adventure</a></li>
+            <li><a href="library.html?genre=Drama">Drama</a></li>
+            <li><a href="library.html?genre=Historical">Historical</a></li>
+            <li><a href="library.html?genre=Light%20Novel">Light Novel</a></li>
+            <li><a href="library.html?genre=Supernatural">Supernatural</a></li>
+            <li><a href="library.html?genre=Action">Action</a></li>
+            <li><a href="library.html?genre=Comedy">Comedy</a></li>
+          </ul>
+        </li>
+        <li><a href="about.html"><img class="nav-icon" src="images/scenes/about.gif" onerror="this.onerror=null;this.src='images/icons/about.svg'" alt=""> About</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <div class="library-top">
+        <h1><img class="icon" src="images/scenes/wink.gif"> The Library</h1>
+        <input id="search" type="search" placeholder="Search by title, author or genre" aria-label="Search books">
+      </div>
+      <div class="genre-buttons">
+        <button class="selected" data-genre="All">All</button>
+        <button data-genre="Fantasy">Fantasy</button>
+        <button data-genre="Sci-Fi">Sci-Fi</button>
+        <button data-genre="Romance">Romance</button>
+        <button data-genre="Mystery">Mystery</button>
+        <button data-genre="Thriller">Thriller</button>
+        <button data-genre="Horror">Horror</button>
+        <button data-genre="Classic">Classic</button>
+        <button data-genre="Children's">Children's</button>
+        <button data-genre="Dystopian">Dystopian</button>
+        <button data-genre="Adventure">Adventure</button>
+        <button data-genre="Drama">Drama</button>
+        <button data-genre="Historical">Historical</button>
+        <button data-genre="Light Novel">Light Novel</button>
+        <button data-genre="Supernatural">Supernatural</button>
+        <button data-genre="Action">Action</button>
+        <button data-genre="Comedy">Comedy</button>
+      </div>
+      <p id="count" class="muted"></p>
+      <div class="grid" id="grid">
+        <article class="card" data-genres="Fantasy,Adventure,Classic">
+          <a href="stories/the-hobbit.html">
+            <img src="images/covers/the-hobbit.jpg" onerror="this.onerror=null;this.src='images/placeholder/cover-01.svg'" alt="Cover of The Hobbit">
+          </a>
+          <div class="card-info">
+            <div class="badges"><a class="badge" href="library.html?genre=Fantasy">Fantasy</a><a class="badge" href="library.html?genre=Adventure">Adventure</a><a class="badge" href="library.html?genre=Classic">Classic</a></div>
+            <h3>The Hobbit</h3>
+            <p class="author">by J.R.R. Tolkien</p>
+            <p class="synopsis" hidden>A homebody hobbit is swept into a dragon-hunting adventure.</p>
+            <div class="buttons">
+              <button class="btn btn-outline synopsis-btn">Synopsis</button>
+              <button class="btn btn-outline like-btn" data-id="1"><img class="heart" src="images/icons/heart-outline.svg" alt=""> <span>Like</span></button>
+            </div>
+            <a class="btn read-btn" href="stories/the-hobbit.html">Start Reading</a>
+          </div>
+        </article>
+        <article class="card" data-genres="Mystery">
+          <a href="stories/smaller-and-smaller-circles.html">
+            <img src="images/covers/smaller-and-smaller-circles.jpg" onerror="this.onerror=null;this.src='images/placeholder/cover-02.svg'" alt="Cover of Smaller and Smaller Circles">
+          </a>
+          <div class="card-info">
+            <div class="badges"><a class="badge" href="../library.html?genre=Mystery">Mystery</a><a class="badge" href="../library.html?genre=Thriller">Thriller</a><a class="badge" href="../library.html?genre=Drama">Drama</a></div>
+            <h3>Smaller and Smaller Circles</h3>
+            <p class="author">by F.H. Batacan </p>
+            <p class="synopsis" hidden>Two Jesuit priests help investigate a series of murders of boys in a Manila slum.</p>
+            <div class="buttons">
+              <button class="btn btn-outline synopsis-btn">Synopsis</button>
+              <button class="btn btn-outline like-btn" data-id="2"><img class="heart" src="images/icons/heart-outline.svg" alt=""> <span>Like</span></button>
+            </div>
+            <a class="btn read-btn" href="stories/smaller-and-smaller-circles.html">Start Reading</a>
+          </div>
+        </article>
+        <article class="card" data-genres="Sci-Fi,Adventure">
+          <a href="stories/project-hail-mary.html">
+            <img src="images/covers/project-hail-mary.png" onerror="this.onerror=null;this.src='images/placeholder/cover-03.svg'" alt="Cover of Project Hail Mary">
+          </a>
+          <div class="card-info">
+            <div class="badges"><a class="badge" href="library.html?genre=Sci-Fi">Sci-Fi</a><a class="badge" href="library.html?genre=Adventure">Adventure</a></div>
+            <h3>Project Hail Mary</h3>
+            <p class="author">by Andy Weir</p>
+            <p class="synopsis" hidden>An unnamed man wakes up in space with no memory and a mission to save Earth.</p>
+            <div class="buttons">
+              <button class="btn btn-outline synopsis-btn">Synopsis</button>
+              <button class="btn btn-outline like-btn" data-id="3"><img class="heart" src="images/icons/heart-outline.svg" alt=""> <span>Like</span></button>
+            </div>
+            <a class="btn read-btn" href="stories/project-hail-mary.html">Start Reading</a>
+          </div>
+        </article>
+        <article class="card" data-genres="Romance,Drama">
+          <a href="stories/the-notebook.html">
+            <img src="images/covers/the-notebook.jpg" onerror="this.onerror=null;this.src='images/placeholder/cover-04.svg'" alt="Cover of The Notebook">
+          </a>
+          <div class="card-info">
+            <div class="badges"><a class="badge" href="library.html?genre=Romance">Romance</a><a class="badge" href="library.html?genre=Drama">Drama</a></div>
+            <h3>The Notebook</h3>
+            <p class="author">by Nicholas Sparks</p>
+            <p class="synopsis" hidden>A summer romance between a poor young man and a wealthy girl is tested by time and distance.</p>
+            <div class="buttons">
+              <button class="btn btn-outline synopsis-btn">Synopsis</button>
+              <button class="btn btn-outline like-btn" data-id="4"><img class="heart" src="images/icons/heart-outline.svg" alt=""> <span>Like</span></button>
+            </div>
+            <a class="btn read-btn" href="stories/the-notebook.html">Start Reading</a>
+          </div>
+        </article>
+        <article class="card" data-genres="Romance,Drama">
+          <a href="stories/the-fault-in-our-stars.html">
+            <img src="images/covers/the-fault-in-our-stars.jpg" onerror="this.onerror=null;this.src='images/placeholder/cover-05.svg'" alt="Cover of The Fault in Our Stars">
+          </a>
+          <div class="card-info">
+            <div class="badges"><a class="badge" href="library.html?genre=Romance">Romance</a><a class="badge" href="library.html?genre=Drama">Drama</a></div>
+            <h3>The Fault in Our Stars</h3>
+            <p class="author">by John Green</p>
+            <p class="synopsis" hidden>Two teens meet in a support group and fall in love.</p>
+            <div class="buttons">
+              <button class="btn btn-outline synopsis-btn">Synopsis</button>
+              <button class="btn btn-outline like-btn" data-id="5"><img class="heart" src="images/icons/heart-outline.svg" alt=""> <span>Like</span></button>
+            </div>
+            <a class="btn read-btn" href="stories/the-fault-in-our-stars.html">Start Reading</a>
+          </div>
+        </article>
+        <article class="card" data-genres="Light Novel,Drama,Fantasy">
+          <a href="stories/violet-evergarden.html">
+            <img src="images/covers/violet-evergarden.png" onerror="this.onerror=null;this.src='images/placeholder/cover-06.svg'" alt="Cover of Violet Evergarden">
+          </a>
+          <div class="card-info">
+            <div class="badges"><a class="badge" href="library.html?genre=Light%20Novel">Light Novel</a><a class="badge" href="library.html?genre=Drama">Drama</a><a class="badge" href="library.html?genre=Fantasy">Fantasy</a></div>
+            <h3>Violet Evergarden</h3>
+            <p class="author">by Kana Akatsuki</p>
+            <p class="synopsis" hidden>A former soldier becomes a letter writer for hire while she searches for the meaning of the words 'I love you'.</p>
+            <div class="buttons">
+              <button class="btn btn-outline synopsis-btn">Synopsis</button>
+              <button class="btn btn-outline like-btn" data-id="6"><img class="heart" src="images/icons/heart-outline.svg" alt=""> <span>Like</span></button>
+            </div>
+            <a class="btn read-btn" href="stories/violet-evergarden.html">Start Reading</a>
+          </div>
+        </article>
+        <article class="card" data-genres="Mystery,Thriller,Drama">
+          <a href="stories/the-girl-on-the-train.html">
+            <img src="images/covers/the-girl-on-the-train.jpg" onerror="this.onerror=null;this.src='images/placeholder/cover-07.svg'" alt="Cover of The Girl on the Train">
+          </a>
+          <div class="card-info">
+            <div class="badges"><a class="badge" href="library.html?genre=Mystery">Mystery</a><a class="badge" href="library.html?genre=Thriller">Thriller</a><a class="badge" href="library.html?genre=Drama">Drama</a></div>
+            <h3>The Girl on the Train</h3>
+            <p class="author">by Paula Hawkins</p>
+            <p class="synopsis" hidden>A commuter watches a stranger's life from her window and sees something wrong.</p>
+            <div class="buttons">
+              <button class="btn btn-outline synopsis-btn">Synopsis</button>
+              <button class="btn btn-outline like-btn" data-id="7"><img class="heart" src="images/icons/heart-outline.svg" alt=""> <span>Like</span></button>
+            </div>
+            <a class="btn read-btn" href="stories/the-girl-on-the-train.html">Start Reading</a>
+          </div>
+        </article>
+        <article class="card" data-genres="Horror,Supernatural,Classic">
+          <a href="stories/the-haunting-of-hill-house.html">
+            <img src="images/covers/the-haunting-of-hill-house.jpg" onerror="this.onerror=null;this.src='images/placeholder/cover-08.svg'" alt="Cover of The Haunting of Hill House">
+          </a>
+          <div class="card-info">
+            <div class="badges"><a class="badge" href="library.html?genre=Horror">Horror</a><a class="badge" href="library.html?genre=Supernatural">Supernatural</a><a class="badge" href="library.html?genre=Classic">Classic</a></div>
+            <h3>The Haunting of Hill House</h3>
+            <p class="author">by Shirley Jackson</p>
+            <p class="synopsis" hidden>Four people stay in a house that seems to be watching them.</p>
+            <div class="buttons">
+              <button class="btn btn-outline synopsis-btn">Synopsis</button>
+              <button class="btn btn-outline like-btn" data-id="8"><img class="heart" src="images/icons/heart-outline.svg" alt=""> <span>Like</span></button>
+            </div>
+            <a class="btn read-btn" href="stories/the-haunting-of-hill-house.html">Start Reading</a>
+          </div>
+        </article>
+        <article class="card" data-genres="Classic,Drama,Historical">
+          <a href="stories/to-kill-a-mockingbird.html">
+            <img src="images/covers/to-kill-a-mockingbird.png" onerror="this.onerror=null;this.src='images/placeholder/cover-09.svg'" alt="Cover of To Kill a Mockingbird">
+          </a>
+          <div class="card-info">
+            <div class="badges"><a class="badge" href="library.html?genre=Classic">Classic</a><a class="badge" href="library.html?genre=Drama">Drama</a><a class="badge" href="library.html?genre=Historical">Historical</a></div>
+            <h3>To Kill a Mockingbird</h3>
+            <p class="author">by Harper Lee</p>
+            <p class="synopsis" hidden>A girl in a small Southern town learns about fairness and prejudice.</p>
+            <div class="buttons">
+              <button class="btn btn-outline synopsis-btn">Synopsis</button>
+              <button class="btn btn-outline like-btn" data-id="9"><img class="heart" src="images/icons/heart-outline.svg" alt=""> <span>Like</span></button>
+            </div>
+            <a class="btn read-btn" href="stories/to-kill-a-mockingbird.html">Start Reading</a>
+          </div>
+        </article>
+        <article class="card" data-genres="Light Novel,Sci-Fi,Action">
+          <a href="stories/sword-art-online.html">
+            <img src="images/covers/sword-art-online.jpeg" onerror="this.onerror=null;this.src='images/placeholder/cover-10.svg'" alt="Cover of Sword Art Online">
+          </a>
+          <div class="card-info">
+            <div class="badges"><a class="badge" href="library.html?genre=Light%20Novel">Light Novel</a><a class="badge" href="library.html?genre=Sci-Fi">Sci-Fi</a><a class="badge" href="library.html?genre=Action">Action</a></div>
+            <h3>Sword Art Online</h3>
+            <p class="author">by Reki Kawahara</p>
+            <p class="synopsis" hidden>Thousands of players are trapped inside a virtual reality game, where dying in the game means dying for real.</p>
+            <div class="buttons">
+              <button class="btn btn-outline synopsis-btn">Synopsis</button>
+              <button class="btn btn-outline like-btn" data-id="10"><img class="heart" src="images/icons/heart-outline.svg" alt=""> <span>Like</span></button>
+            </div>
+            <a class="btn read-btn" href="stories/sword-art-online.html">Start Reading</a>
+          </div>
+        </article>
+        <article class="card" data-genres="Light Novel,Mystery,Historical">
+          <a href="stories/the-apothecary-diaries.html">
+            <img src="images/covers/the-apothecary-diaries.jpg" onerror="this.onerror=null;this.src='images/placeholder/cover-11.svg'" alt="Cover of The Apothecary Diaries">
+          </a>
+          <div class="card-info">
+            <div class="badges"><a class="badge" href="library.html?genre=Light%20Novel">Light Novel</a><a class="badge" href="library.html?genre=Mystery">Mystery</a><a class="badge" href="library.html?genre=Historical">Historical</a></div>
+            <h3>The Apothecary Diaries</h3>
+            <p class="author">by Natsu Hyuuga</p>
+            <p class="synopsis" hidden>A sharp-minded apothecary is pulled into an imperial palace, where she uncovers poisonings and court secrets.</p>
+            <div class="buttons">
+              <button class="btn btn-outline synopsis-btn">Synopsis</button>
+              <button class="btn btn-outline like-btn" data-id="11"><img class="heart" src="images/icons/heart-outline.svg" alt=""> <span>Like</span></button>
+            </div>
+            <a class="btn read-btn" href="stories/the-apothecary-diaries.html">Start Reading</a>
+          </div>
+        </article>
+        <article class="card" data-genres="Dystopian,Action,Adventure">
+          <a href="stories/the-hunger-games.html">
+            <img src="images/covers/the-hunger-games.jpg" onerror="this.onerror=null;this.src='images/placeholder/cover-12.svg'" alt="Cover of The Hunger Games">
+          </a>
+          <div class="card-info">
+            <div class="badges"><a class="badge" href="library.html?genre=Dystopian">Dystopian</a><a class="badge" href="library.html?genre=Action">Action</a><a class="badge" href="library.html?genre=Adventure">Adventure</a></div>
+            <h3>The Hunger Games</h3>
+            <p class="author">by Suzanne Collins</p>
+            <p class="synopsis" hidden>A girl takes her sister's place in a deadly televised contest.</p>
+            <div class="buttons">
+              <button class="btn btn-outline synopsis-btn">Synopsis</button>
+              <button class="btn btn-outline like-btn" data-id="12"><img class="heart" src="images/icons/heart-outline.svg" alt=""> <span>Like</span></button>
+            </div>
+            <a class="btn read-btn" href="stories/the-hunger-games.html">Start Reading</a>
+          </div>
+        </article>
+        <article class="card" data-genres="Fantasy,Drama,Supernatural">
+          <a href="stories/if-cats-disappeared-from-the-world.html">
+            <img src="images/covers/if-cats-disappeared-from-the-world.jpg" onerror="this.onerror=null;this.src='images/placeholder/cover-13.svg'" alt="Cover of If Cats Disappeared from the World">
+          </a>
+          <div class="card-info">
+            <div class="badges"><a class="badge" href="library.html?genre=Fantasy">Fantasy</a><a class="badge" href="library.html?genre=Drama">Drama</a><a class="badge" href="library.html?genre=Supernatural">Supernatural</a></div>
+            <h3>If Cats Disappeared from the World</h3>
+            <p class="author">by Genki Kawamura</p>
+            <p class="synopsis" hidden>A terminally ill postman makes a deal with the Devil: for every day of life he gets, one thing disappears from the world.</p>
+            <div class="buttons">
+              <button class="btn btn-outline synopsis-btn">Synopsis</button>
+              <button class="btn btn-outline like-btn" data-id="13"><img class="heart" src="images/icons/heart-outline.svg" alt=""> <span>Like</span></button>
+            </div>
+            <a class="btn read-btn" href="stories/if-cats-disappeared-from-the-world.html">READ</a>
+          </div>
+        </article>
+        <article class="card" data-genres="Light Novel,Fantasy,Comedy">
+          <a href="stories/that-time-i-got-reincarnated-as-a-slime.html">
+            <img src="images/covers/that-time-i-got-reincarnated-as-a-slime.jpg" onerror="this.onerror=null;this.src='images/placeholder/cover-14.svg'" alt="Cover of That Time I Got Reincarnated as a Slime">
+          </a>
+          <div class="card-info">
+            <div class="badges"><a class="badge" href="library.html?genre=Light%20Novel">Light Novel</a><a class="badge" href="library.html?genre=Fantasy">Fantasy</a><a class="badge" href="library.html?genre=Comedy">Comedy</a></div>
+            <h3>That Time I Got Reincarnated as a Slime</h3>
+            <p class="author">by Fuse</p>
+            <p class="synopsis" hidden>A man who dies in an accident is reborn as a slime in another world and slowly builds a nation of monsters.</p>
+            <div class="buttons">
+              <button class="btn btn-outline synopsis-btn">Synopsis</button>
+              <button class="btn btn-outline like-btn" data-id="14"><img class="heart" src="images/icons/heart-outline.svg" alt=""> <span>Like</span></button>
+            </div>
+            <a class="btn read-btn" href="stories/that-time-i-got-reincarnated-as-a-slime.html">Start Reading</a>
+          </div>
+        </article>
+        <article class="card" data-genres="Fantasy,Adventure,Comedy">
+          <a href="stories/the-lightning-thief.html">
+            <img src="images/covers/the-lightning-thief.jpg" onerror="this.onerror=null;this.src='images/placeholder/cover-15.svg'" alt="Cover of Percy Jackson and the Lightning Thief">
+          </a>
+          <div class="card-info">
+            <div class="badges"><a class="badge" href="library.html?genre=Fantasy">Fantasy</a><a class="badge" href="library.html?genre=Adventure">Adventure</a><a class="badge" href="library.html?genre=Comedy">Comedy</a></div>
+            <h3>Percy Jackson and the Lightning Thief</h3>
+            <p class="author">by Rick Riordan</p>
+            <p class="synopsis" hidden>A troubled teenager finds out he is the son of a Greek god.</p>
+            <div class="buttons">
+              <button class="btn btn-outline synopsis-btn">Synopsis</button>
+              <button class="btn btn-outline like-btn" data-id="15"><img class="heart" src="images/icons/heart-outline.svg" alt=""> <span>Like</span></button>
+            </div>
+            <a class="btn read-btn" href="stories/the-lightning-thief.html">Start Reading</a>
+          </div>
+        </article>
+        <article class="card" data-genres="Fantasy,Classic,Romance">
+          <a href="stories/cinderella.html">
+            <img src="images/covers/cinderella.jpg" onerror="this.onerror=null;this.src='images/placeholder/cover-16.svg'" alt="Cover of Cinderella">
+          </a>
+          <div class="card-info">
+            <div class="badges"><a class="badge" href="library.html?genre=Fantasy">Fantasy</a><a class="badge" href="library.html?genre=Classic">Classic</a><a class="badge" href="library.html?genre=Romance">Romance</a></div>
+            <h3>Cinderella</h3>
+            <p class="author">by Charles Perrault</p>
+            <p class="synopsis" hidden>A kind girl is helped by magic to attend the royal ball.</p>
+            <div class="buttons">
+              <button class="btn btn-outline synopsis-btn">Synopsis</button>
+              <button class="btn btn-outline like-btn" data-id="16"><img class="heart" src="images/icons/heart-outline.svg" alt=""> <span>Like</span></button>
+            </div>
+            <a class="btn read-btn" href="stories/cinderella.html">Start Reading</a>
+          </div>
+        </article>
+        <article class="card" data-genres="Fantasy,Classic,Children's">
+          <a href="stories/snow-white.html">
+            <img src="images/covers/snow-white.jpeg" onerror="this.onerror=null;this.src='images/placeholder/cover-17.svg'" alt="Cover of Snow White">
+          </a>
+          <div class="card-info">
+            <div class="badges"><a class="badge" href="library.html?genre=Fantasy">Fantasy</a><a class="badge" href="library.html?genre=Classic">Classic</a><a class="badge" href="library.html?genre=Children's">Children's</a></div>
+            <h3>Snow White</h3>
+            <p class="author">by The Brothers Grimm</p>
+            <p class="synopsis" hidden>A princess hides with seven dwarfs from her jealous stepmother.</p>
+            <div class="buttons">
+              <button class="btn btn-outline synopsis-btn">Synopsis</button>
+              <button class="btn btn-outline like-btn" data-id="17"><img class="heart" src="images/icons/heart-outline.svg" alt=""> <span>Like</span></button>
+            </div>
+            <a class="btn read-btn" href="stories/snow-white.html">Start Reading</a>
+          </div>
+        </article>
+        <article class="card" data-genres="Fantasy,Adventure,Comedy">
+          <a href="stories/how-to-train-your-dragon.html">
+            <img src="images/covers/how-to-train-your-dragon.jpg" onerror="this.onerror=null;this.src='images/placeholder/cover-18.svg'" alt="Cover of How to Train Your Dragon">
+          </a>
+          <div class="card-info">
+            <div class="badges"><a class="badge" href="library.html?genre=Fantasy">Fantasy</a><a class="badge" href="library.html?genre=Adventure">Adventure</a><a class="badge" href="library.html?genre=Comedy">Comedy</a></div>
+            <h3>How to Train Your Dragon</h3>
+            <p class="author">by Cressida Cowell</p>
+            <p class="synopsis" hidden>A small Viking boy must catch and train a dragon.</p>
+            <div class="buttons">
+              <button class="btn btn-outline synopsis-btn">Synopsis</button>
+              <button class="btn btn-outline like-btn" data-id="18"><img class="heart" src="images/icons/heart-outline.svg" alt=""> <span>Like</span></button>
+            </div>
+            <a class="btn read-btn" href="stories/how-to-train-your-dragon.html">Start Reading</a>
+          </div>
+        </article>
+        <article class="card" data-genres="Fantasy,Adventure,Children's">
+          <a href="stories/harry-potter-philosophers-stone.html">
+            <img src="images/covers/harry-potter-philosophers-stone.jpeg" onerror="this.onerror=null;this.src='images/placeholder/cover-19.svg'" alt="Cover of Harry Potter and the Philosopher's Stone">
+          </a>
+          <div class="card-info">
+            <div class="badges"><a class="badge" href="library.html?genre=Fantasy">Fantasy</a><a class="badge" href="library.html?genre=Adventure">Adventure</a><a class="badge" href="library.html?genre=Children's">Children's</a></div>
+            <h3>Harry Potter and the Philosopher's Stone</h3>
+            <p class="author">by J.K. Rowling</p>
+            <p class="synopsis" hidden>The UK edition of Harry's first year at a school of magic.</p>
+            <div class="buttons">
+              <button class="btn btn-outline synopsis-btn">Synopsis</button>
+              <button class="btn btn-outline like-btn" data-id="19"><img class="heart" src="images/icons/heart-outline.svg" alt=""> <span>Like</span></button>
+            </div>
+            <a class="btn read-btn" href="stories/harry-potter-philosophers-stone.html">Start Reading</a>
+          </div>
+        </article>
+        <article class="card" data-genres="Children's,Comedy">
+          <a href="stories/the-day-the-crayons-quit.html">
+            <img src="images/covers/the-day-the-crayons-quit.png" onerror="this.onerror=null;this.src='images/placeholder/cover-20.svg'" alt="Cover of The Day the Crayons Quit">
+          </a>
+          <div class="card-info">
+            <div class="badges"><a class="badge" href="library.html?genre=Children's">Children's</a><a class="badge" href="library.html?genre=Comedy">Comedy</a></div>
+            <h3>The Day the Crayons Quit</h3>
+            <p class="author">by Drew Daywalt</p>
+            <p class="synopsis" hidden>A boy receives letters of complaint from his own crayons.</p>
+            <div class="buttons">
+              <button class="btn btn-outline synopsis-btn">Synopsis</button>
+              <button class="btn btn-outline like-btn" data-id="20"><img class="heart" src="images/icons/heart-outline.svg" alt=""> <span>Like</span></button>
+            </div>
+            <a class="btn read-btn" href="stories/the-day-the-crayons-quit.html">Start Reading</a>
+          </div>
+        </article>
+        <article class="card" data-genres="Children's,Classic">
+          <a href="stories/winnie-the-pooh.html">
+            <img src="images/covers/winnie-the-pooh.png" onerror="this.onerror=null;this.src='images/placeholder/cover-21.svg'" alt="Cover of Winnie-the-Pooh">
+          </a>
+          <div class="card-info">
+            <div class="badges"><a class="badge" href="library.html?genre=Children's">Children's</a><a class="badge" href="library.html?genre=Classic">Classic</a></div>
+            <h3>Winnie-the-Pooh</h3>
+            <p class="author">by A.A. Milne</p>
+            <p class="synopsis" hidden>A bear of very little brain goes looking for honey.</p>
+            <div class="buttons">
+              <button class="btn btn-outline synopsis-btn">Synopsis</button>
+              <button class="btn btn-outline like-btn" data-id="21"><img class="heart" src="images/icons/heart-outline.svg" alt=""> <span>Like</span></button>
+            </div>
+            <a class="btn read-btn" href="stories/winnie-the-pooh.html">Start Reading</a>
+          </div>
+        </article>
+        <article class="card" data-genres="Mystery,Thriller,Drama">
+          <a href="stories/shutter-island.html">
+            <img src="images/covers/shutter-island.jpg" onerror="this.onerror=null;this.src='images/placeholder/cover-22.svg'" alt="Cover of Shutter Island">
+          </a>
+          <div class="card-info">
+            <div class="badges"><a class="badge" href="library.html?genre=Mystery">Mystery</a><a class="badge" href="library.html?genre=Thriller">Thriller</a><a class="badge" href="library.html?genre=Drama">Drama</a></div>
+            <h3>Shutter Island</h3>
+            <p class="author">by Dennis Lehane</p>
+            <p class="synopsis" hidden>A U.S. Marshal investigates the disappearance of a patient from a hospital for the criminally insane on an isolated island.</p>
+            <div class="buttons">
+              <button class="btn btn-outline synopsis-btn">Synopsis</button>
+              <button class="btn btn-outline like-btn" data-id="22"><img class="heart" src="images/icons/heart-outline.svg" alt=""> <span>Like</span></button>
+            </div>
+            <a class="btn read-btn" href="stories/shutter-island.html">Start Reading</a>
+          </div>
+        </article>
+        <article class="card" data-genres="Horror,Supernatural,Thriller">
+          <a href="stories/pet-sematary.html">
+            <img src="images/covers/pet-sematary.jpg" onerror="this.onerror=null;this.src='images/placeholder/cover-23.svg'" alt="Cover of Pet Sematary">
+          </a>
+          <div class="card-info">
+            <div class="badges"><a class="badge" href="library.html?genre=Horror">Horror</a><a class="badge" href="library.html?genre=Supernatural">Supernatural</a><a class="badge" href="library.html?genre=Thriller">Thriller</a></div>
+            <h3>Pet Sematary</h3>
+            <p class="author">by Stephen King</p>
+            <p class="synopsis" hidden>A family moves to a quiet house in Maine and discovers a burial ground behind it with a terrible power.</p>
+            <div class="buttons">
+              <button class="btn btn-outline synopsis-btn">Synopsis</button>
+              <button class="btn btn-outline like-btn" data-id="23"><img class="heart" src="images/icons/heart-outline.svg" alt=""> <span>Like</span></button>
+            </div>
+            <a class="btn read-btn" href="stories/pet-sematary.html">Start Reading</a>
+          </div>
+        </article>
+        <article class="card" data-genres="Classic,Children's,Drama">
+          <a href="stories/a-little-princess.html">
+            <img src="images/covers/a-little-princess.png" onerror="this.onerror=null;this.src='images/placeholder/cover-24.svg'" alt="Cover of A Little Princess">
+          </a>
+          <div class="card-info">
+            <div class="badges"><a class="badge" href="library.html?genre=Classic">Classic</a><a class="badge" href="library.html?genre=Children's">Children's</a><a class="badge" href="library.html?genre=Drama">Drama</a></div>
+            <h3>A Little Princess</h3>
+            <p class="author">by Frances Hodgson Burnett</p>
+            <p class="synopsis" hidden>A rich girl at a boarding school loses everything but keeps her kindness.</p>
+            <div class="buttons">
+              <button class="btn btn-outline synopsis-btn">Synopsis</button>
+              <button class="btn btn-outline like-btn" data-id="24"><img class="heart" src="images/icons/heart-outline.svg" alt=""> <span>Like</span></button>
+            </div>
+            <a class="btn read-btn" href="stories/a-little-princess.html">Start Reading</a>
+          </div>
+        </article>
+        <article class="card" data-genres="Historical,Drama,Classic">
+          <a href="stories/number-the-stars.html">
+            <img src="images/covers/number-the-stars.jpg" onerror="this.onerror=null;this.src='images/placeholder/cover-25.svg'" alt="Cover of Number the Stars">
+          </a>
+          <div class="card-info">
+            <div class="badges"><a class="badge" href="library.html?genre=Historical">Historical</a><a class="badge" href="library.html?genre=Drama">Drama</a><a class="badge" href="library.html?genre=Classic">Classic</a></div>
+            <h3>Number the Stars</h3>
+            <p class="author">by Lois Lowry</p>
+            <p class="synopsis" hidden>A Danish girl helps her Jewish friend escape during World War II.</p>
+            <div class="buttons">
+              <button class="btn btn-outline synopsis-btn">Synopsis</button>
+              <button class="btn btn-outline like-btn" data-id="25"><img class="heart" src="images/icons/heart-outline.svg" alt=""> <span>Like</span></button>
+            </div>
+            <a class="btn read-btn" href="stories/number-the-stars.html">Start Reading</a>
+          </div>
+        </article>
+        <article class="card" data-genres="Horror,Supernatural,Thriller">
+          <a href="stories/it.html">
+            <img src="images/covers/it.jpg" onerror="this.onerror=null;this.src='images/placeholder/cover-26.svg'" alt="Cover of It">
+          </a>
+          <div class="card-info">
+            <div class="badges"><a class="badge" href="library.html?genre=Horror">Horror</a><a class="badge" href="library.html?genre=Supernatural">Supernatural</a><a class="badge" href="library.html?genre=Thriller">Thriller</a></div>
+            <h3>It</h3>
+            <p class="author">by Stephen King</p>
+            <p class="synopsis" hidden>A group of outcast children in a small town face a shapeshifting evil that wakes every few decades.</p>
+            <div class="buttons">
+              <button class="btn btn-outline synopsis-btn">Synopsis</button>
+              <button class="btn btn-outline like-btn" data-id="26"><img class="heart" src="images/icons/heart-outline.svg" alt=""> <span>Like</span></button>
+            </div>
+            <a class="btn read-btn" href="stories/it.html">Start Reading</a>
+          </div>
+        </article>
+        <article class="card" data-genres="Fantasy,Adventure,Classic">
+          <a href="stories/the-wonderful-wizard-of-oz.html">
+            <img src="images/covers/the-wonderful-wizard-of-oz.jpg" onerror="this.onerror=null;this.src='images/placeholder/cover-27.svg'" alt="Cover of The Wonderful Wizard of Oz">
+          </a>
+          <div class="card-info">
+            <div class="badges"><a class="badge" href="library.html?genre=Fantasy">Fantasy</a><a class="badge" href="library.html?genre=Adventure">Adventure</a><a class="badge" href="library.html?genre=Classic">Classic</a></div>
+            <h3>The Wonderful Wizard of Oz</h3>
+            <p class="author">by L. Frank Baum</p>
+            <p class="synopsis" hidden>A Kansas girl is carried by a cyclone to a magical land.</p>
+            <div class="buttons">
+              <button class="btn btn-outline synopsis-btn">Synopsis</button>
+              <button class="btn btn-outline like-btn" data-id="27"><img class="heart" src="images/icons/heart-outline.svg" alt=""> <span>Like</span></button>
+            </div>
+            <a class="btn read-btn" href="stories/the-wonderful-wizard-of-oz.html">Start Reading</a>
+          </div>
+        </article>
+        <article class="card" data-genres="Children's,Drama">
+          <a href="stories/what-do-you-do-with-an-idea.html">
+            <img src="images/covers/what-do-you-do-with-an-idea.png" onerror="this.onerror=null;this.src='images/placeholder/cover-28.svg'" alt="Cover of What Do You Do with an Idea?">
+          </a>
+          <div class="card-info">
+            <div class="badges"><a class="badge" href="library.html?genre=Children's">Children's</a><a class="badge" href="library.html?genre=Drama">Drama</a></div>
+            <h3>What Do You Do with an Idea?</h3>
+            <p class="author">by Kobi Yamada</p>
+            <p class="synopsis" hidden>A child learns to care for a small idea until it grows.</p>
+            <div class="buttons">
+              <button class="btn btn-outline synopsis-btn">Synopsis</button>
+              <button class="btn btn-outline like-btn" data-id="28"><img class="heart" src="images/icons/heart-outline.svg" alt=""> <span>Like</span></button>
+            </div>
+            <a class="btn read-btn" href="stories/what-do-you-do-with-an-idea.html">Start Reading</a>
+          </div>
+        </article>
+        <article class="card" data-genres="Children's,Drama">
+          <a href="stories/the-rabbit-listened.html">
+            <img src="images/covers/the-rabbit-listened.png" onerror="this.onerror=null;this.src='images/placeholder/cover-29.svg'" alt="Cover of The Rabbit Listened">
+          </a>
+          <div class="card-info">
+            <div class="badges"><a class="badge" href="library.html?genre=Children's">Children's</a><a class="badge" href="library.html?genre=Drama">Drama</a></div>
+            <h3>The Rabbit Listened</h3>
+            <p class="author">by Cori Doerrfeld</p>
+            <p class="synopsis" hidden>A child's block tower falls, and one animal knows how to help.</p>
+            <div class="buttons">
+              <button class="btn btn-outline synopsis-btn">Synopsis</button>
+              <button class="btn btn-outline like-btn" data-id="29"><img class="heart" src="images/icons/heart-outline.svg" alt=""> <span>Like</span></button>
+            </div>
+            <a class="btn read-btn" href="stories/the-rabbit-listened.html">Start Reading</a>
+          </div>
+        </article>
+        <article class="card" data-genres="Horror,Supernatural">
+          <a href="stories/scary-stories-to-tell-in-the-dark.html">
+            <img src="images/covers/scary-stories-to-tell-in-the-dark.jpeg" onerror="this.onerror=null;this.src='images/placeholder/cover-30.svg'" alt="Cover of Scary Stories to Tell in the Dark">
+          </a>
+          <div class="card-info">
+            <div class="badges"><a class="badge" href="library.html?genre=Horror">Horror</a><a class="badge" href="library.html?genre=Supernatural">Supernatural</a></div>
+            <h3>Scary Stories to Tell in the Dark</h3>
+            <p class="author">by Alvin Schwartz</p>
+            <p class="synopsis" hidden>A collection of creepy folktales and urban legends for campfires.</p>
+            <div class="buttons">
+              <button class="btn btn-outline synopsis-btn">Synopsis</button>
+              <button class="btn btn-outline like-btn" data-id="30"><img class="heart" src="images/icons/heart-outline.svg" alt=""> <span>Like</span></button>
+            </div>
+            <a class="btn read-btn" href="stories/scary-stories-to-tell-in-the-dark.html">Start Reading</a>
+          </div>
+        </article>
+      </div>
+    </section >
+  </main>
+  <footer>
+    <p>Once Upon a Page Stories - ITE 1 Project.</p>
+  </footer>
+  <script src="js/script.js"></script>
+</body>
+</html>
